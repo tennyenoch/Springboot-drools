@@ -1,0 +1,17 @@
+package KieRule;
+import com.drools.demo.Order;
+
+rule HDFC
+when
+order1Object : Order(cardType=="HDFC" && price>10000);
+then
+order1Object.setDiscount(10);
+end;
+
+rule ICICI
+when
+order1Object : Order(cardType=="ICICI" && price>15000);
+then
+order1Object.setDiscount(5);
+end;
+
